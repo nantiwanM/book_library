@@ -58,12 +58,12 @@ class _DashboardPageState extends State<DashboardPage> {
   // สร้างข้อมูลสำหรับ Pie Chart แสดง Top 5 หมวดหมู่
   List<PieChartSectionData> buildPieSections() {
     if (genreCount.isEmpty) return [];
+
     final sortedEntries = genreCount.entries.toList()
       ..sort((a, b) => b.value.compareTo(a.value));
+
+    // แสดงเฉพาะ Top 5
     final top5 = sortedEntries.take(5).toList();
-    final othersCount = sortedEntries
-        .skip(3)
-        .fold(0, (sum, e) => sum + e.value);
 
     final colors = [
       Color(0xFFFFC4A3),
@@ -71,7 +71,6 @@ class _DashboardPageState extends State<DashboardPage> {
       Color(0xFFB3E5FC),
       Color(0xFFC8E6C9),
       Color(0xFFD1C4E9),
-      Colors.grey.shade300,
     ];
 
     final sections = <PieChartSectionData>[];
