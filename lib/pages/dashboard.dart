@@ -62,7 +62,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ..sort((a, b) => b.value.compareTo(a.value));
     final top5 = sortedEntries.take(5).toList();
     final othersCount = sortedEntries
-        .skip(5)
+        .skip(3)
         .fold(0, (sum, e) => sum + e.value);
 
     final colors = [
@@ -83,22 +83,6 @@ class _DashboardPageState extends State<DashboardPage> {
           value: entry.value.toDouble(),
           title: '${entry.key}\n${entry.value}',
           color: colors[i % colors.length],
-          radius: 60,
-          titleStyle: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
-        ),
-      );
-    }
-
-    if (othersCount > 0) {
-      sections.add(
-        PieChartSectionData(
-          value: othersCount.toDouble(),
-          title: 'อื่นๆ\n$othersCount',
-          color: colors.last,
           radius: 60,
           titleStyle: const TextStyle(
             fontSize: 12,
