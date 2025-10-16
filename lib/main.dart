@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-scaffoldBackgroundColor: const Color(0xFFF5F5F5), // เทาอ่อนพาสเทล
+        scaffoldBackgroundColor: const Color(0xFFF5F5F5), // เทาอ่อนพาสเทล
 
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 245, 172, 104),
@@ -25,9 +25,9 @@ scaffoldBackgroundColor: const Color(0xFFF5F5F5), // เทาอ่อนพา
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-  fillColor: Colors.white, // พื้นหลังสีขาวคงที่
-  hoverColor: Colors.white, // สีเวลา hover
-  focusColor: Colors.white, // สีเวลา focus
+          fillColor: Colors.white, // พื้นหลังสีขาวคงที่
+          hoverColor: Colors.white, // สีเวลา hover
+          focusColor: Colors.white, // สีเวลา focus
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
             borderSide: const BorderSide(color: Colors.grey), // กรอบ textfield
